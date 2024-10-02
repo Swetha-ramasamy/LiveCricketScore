@@ -40,7 +40,7 @@ app.post('/initialize', async (req, res) => {
     }
   });
   
-  // API endpoint to update the score
+ 
   app.post('/update-score', async (req, res) => {
     
     const { batting_team, run, isWicket } = req.body;
@@ -64,8 +64,7 @@ app.post('/initialize', async (req, res) => {
     }
   });
   
-  // Endpoint to get the current score
- // Update the scores endpoint in server.js
+
 app.get('/scores', async (req, res) => {
   try {
     const { batting_team } = req.query;
@@ -80,7 +79,7 @@ app.get('/scores', async (req, res) => {
 });
 
   
-  // WebSocket handling
+ 
   io.on('connection', (socket) => {
     console.log('New client connected');
     socket.on('disconnect', () => {
