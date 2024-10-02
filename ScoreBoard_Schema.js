@@ -2,9 +2,9 @@
 const mongoose = require('mongoose');
 
 const scoreSchema = new mongoose.Schema({
-  batting_team: String,   // Example: "India"
-  runs: Number,           // Total runs scored by the batting team
-  wickets: Number,        // Total wickets lost by the batting team
+  batting_team: String,   
+  runs: Number,           
+  wickets: Number,        
   last_updated: { type: Date, default: Date.now }
 });
 const Score_collection = mongoose.model('Score',scoreSchema)
